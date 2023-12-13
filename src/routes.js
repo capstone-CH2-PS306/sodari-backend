@@ -3,6 +3,11 @@ const handlers = require('./handlers');
 const routes = [
   {
     method: 'GET',
+    path: '/',
+    handler: handlers.getIndex,
+  },
+  {
+    method: 'GET',
     path: '/waste',
     handler: handlers.getItems,
   },
