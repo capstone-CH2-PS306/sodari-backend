@@ -38,8 +38,24 @@ const getItemById = (request, h) => {
   };
 };
 
+const postScanner = (request, h) => {
+  // TODO: add request payload validation, if payload is empty return 400
+  // TODO: integrate machine learning model to predict the item
+  const itemId = 'kertas';
+
+  return {
+    status: 'success',
+    data: {
+      label: itemId,
+      confidence: 0.8,
+      ...wasteData.find((item) => item.id === itemId),
+    },
+  };
+};
+
 module.exports = {
   getIndex,
   getItems,
   getItemById,
+  postScanner,
 };

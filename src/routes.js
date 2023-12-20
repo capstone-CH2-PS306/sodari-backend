@@ -16,6 +16,11 @@ const routes = [
     path: '/waste/{id}',
     handler: handlers.getItemById,
   },
+  {
+    method: 'POST',
+    path: '/scanner',
+    handler: handlers.postScanner,
+  },
 ];
 
 module.exports = routes;
