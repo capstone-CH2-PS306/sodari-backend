@@ -49,6 +49,7 @@ const postScanner = (request, h) => {
       label: itemId,
       confidence: 0.8,
       ...wasteData.find((item) => item.id === itemId),
+      link: 'https://www.google.com/search?q=daur+ulang+kertas',
     },
   };
 };
